@@ -1,0 +1,23 @@
+# First, we create the Class Accountant, in which we define the attributes 
+# that each object will have and the order of them.
+class Accountant:
+    def generate_report(self):
+        print("Generating financial report.")
+
+# Next, we create a Class Technician, in which we define a method called repair_machine.
+class Technician:
+    def repair_machine(self):
+        print("Repairing machine.")
+
+# Then, we create a Class Boss, which inherits from both the Accountant and Technician classes.
+# We use "pass" to indicate that the Boss class does not have any additional attributes or
+# methods of its own.
+class Boss(Accountant, Technician):
+    pass
+
+# Finally, we create an instance of the Boss class and call the generate_report 
+# and repair_machine methods to demonstrate that the Boss class has access to both methods 
+# from its parent classes.
+boss = Boss()
+boss.generate_report()
+boss.repair_machine()
